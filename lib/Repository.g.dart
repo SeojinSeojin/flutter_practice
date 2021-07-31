@@ -8,7 +8,6 @@ part of 'Repository.dart';
 
 Repository _$RepositoryFromJson(Map<String, dynamic> json) {
   return Repository(
-    id: json['id'] as String,
     name: json['name'] as String,
     url: json['url'] as String,
   );
@@ -16,7 +15,6 @@ Repository _$RepositoryFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$RepositoryToJson(Repository instance) =>
     <String, dynamic>{
-      'id': instance.id,
       'name': instance.name,
       'url': instance.url,
     };

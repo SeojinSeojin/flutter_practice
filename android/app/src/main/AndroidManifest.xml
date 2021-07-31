@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seojinseojin.explore_flutter">
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
         android:label="explore_flutter"
         android:icon="@mipmap/ic_launcher">
         <activity

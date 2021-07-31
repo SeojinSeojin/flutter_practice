@@ -9,14 +9,14 @@ part of 'GithubEvent.dart';
 GithubEvent _$GithubEventFromJson(Map<String, dynamic> json) {
   return GithubEvent(
     type: json['type'] as String,
-    actor: Actor.fromJson(json['actor'] as Map<String, dynamic>),
     repo: Repository.fromJson(json['repo'] as Map<String, dynamic>),
+    createdAt: json['created_at'] as String,
   );
 }
 
 Map<String, dynamic> _$GithubEventToJson(GithubEvent instance) =>
     <String, dynamic>{
       'type': instance.type,
-      'actor': instance.actor,
       'repo': instance.repo,
+      'createdAt': instance.createdAt,
     };
