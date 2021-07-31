@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
-void main() => runApp(MyApp());
+Future<http.Response> fetchGithubEvents(String username) {
+  return http.get(Uri.parse("https://api.github.com/users/$username/events"));
+}
+
+void main() => {runApp(MyApp())};
 
 class MyApp extends StatelessWidget {
   @override
